@@ -64,3 +64,9 @@
 ### Execução
 
 1. Após configurar todo o ambiente, no Azure Data Factory selecione os notebooks databricks, faça as configurações requisitadas, como: Linked Service, Path do Notebook e coloque cada um dos notebooks criados na ordem de execução, no próprio pipeline é possível configurar a opção de "retry" para que seja realizada uma nova tentativa de conexão, caso por exemplo perca a conexão com a API.
+
+
+
+
+
+
