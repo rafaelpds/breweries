@@ -68,5 +68,9 @@
 
 ![Texto Alternativo](https://github.com/rafaelpds/breweries/blob/main/imagem/pipeline.png)
 
+Por fim, com a prpoposta será possível criar um lakehouse seguindo a arquitetura medalion.
+
+<a href="https://www.databricks.com/glossary/medallion-architecture">
+<img src="https://raw.githubusercontent.com/Databricks-BR/open_tax/main/images/medalhao.png" width="800px"></a>
 
 
