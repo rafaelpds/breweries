@@ -45,20 +45,20 @@
 - Configurar Resource Groups conforme necessário
 - Ajustar permissões e acessos entre serviços
 
-## Monitoramento e Alertas
+### 5. Monitoramento e Alertas
 
 Para a parte de monitoramento utilizei o próprio monitor da Azure que é integrado com o Azure Data Factory e também pode comunicar a equipe de monitoramento quando ocorrer alguma falha, abaixo segue como fazer as configurações: 
 
-### Azure Monitor
+#### Azure Monitor
 1. No portal Azure, acesse "Monitor"
 2. Crie um novo dashboard
 3. Adicione gráficos e métricas relevantes, eu escolhi a métrica: "Failed Pipeline Runs", por exemplo.
 
-### Configuração de Alertas
+#### Configuração de Alertas
 1. No próprio dashboard das métricas no Azure Monitor, tem a opção "New Alert Rule" é possível configurar uma alerta para as métricas criadas e adicionar a forma de comunicação, eu escolhi a comunicação via e-mail.
 
 
-### 3 - Execução
+## 3 - Execução
 
 1. Após configurar todo o ambiente, no Azure Data Factory selecione os notebooks databricks, faça as configurações requisitadas, como: Linked Service, Path do Notebook e coloque cada um dos notebooks criados na ordem de execução, no próprio pipeline é possível configurar a opção de "retry" para que seja realizada uma nova tentativa de conexão, caso por exemplo perca a conexão com a API.
 
