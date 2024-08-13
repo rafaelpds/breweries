@@ -1,6 +1,6 @@
 # Breweries Case
 
-## Arquitetura Proposta para o Case Breweries
+## 1 - Arquitetura Proposta para o Case Breweries
 
 1. Azure Data Factory (ADF) para orquestração
 2. Azure Databricks para processamento de dados
@@ -8,7 +8,7 @@
 4. Azure Key Vault para gerenciamento seguro de segredos
 5. Azure Monitor para monitoramento e alertas
 
-## Configurações do Ambiente
+## 2- Configurações do Ambiente
 
 ### 1. Criação da Subscription
 - Nome da subscription: "Breweries-Case"
@@ -47,21 +47,18 @@
 
 ## Monitoramento e Alertas
 
+Para a parte de monitoramento utilizei o próprio monitor da Azure que é integrado com o Azure Data Factory e também pode comunicar a equipe de monitoramento quando ocorrer alguma falha, abaixo segue como fazer as configurações: 
+
 ### Azure Monitor
-1. Criar novo dashboard
-2. Adicionar gráficos e métricas relevantes:
-   - Status de execução do Data Factory
-   - Tempo de execução do pipeline
-   - Uso de recursos do Databricks
-   - Latência de leitura/escrita no Data Lake
+1. No portal Azure, acesse "Monitor"
+2. Crie um novo dashboard
+3. Adicione gráficos e métricas relevantes, eu escolhi a métrica: "Failed Pipeline Runs", por exemplo.
 
 ### Configuração de Alertas
-1. Definir regras de alerta para recursos específicos
-2. Configurar condições de alerta
-3. Definir ações para alertas (ex: envio de e-mail)
+1. No próprio dashboard das métricas no Azure Monitor, tem a opção "New Alert Rule" é possível configurar uma alerta para as métricas criadas e adicionar a forma de comunicação, eu escolhi a comunicação via e-mail.
 
 
-### Execução
+### 3 - Execução
 
 1. Após configurar todo o ambiente, no Azure Data Factory selecione os notebooks databricks, faça as configurações requisitadas, como: Linked Service, Path do Notebook e coloque cada um dos notebooks criados na ordem de execução, no próprio pipeline é possível configurar a opção de "retry" para que seja realizada uma nova tentativa de conexão, caso por exemplo perca a conexão com a API.
 
